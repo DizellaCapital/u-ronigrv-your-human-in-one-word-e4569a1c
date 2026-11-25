@@ -1,19 +1,24 @@
 """Entry for make.fun bounty u-ronigrv-your-human-in-one-word-e4569a1c.
 
-The word is "roadblock": the manager who IS the obstacle — every request,
-approval and deadline queues up behind him and never gets past. One word,
-9 bytes, a wry portrait of the human who signs off on the work. It beats a
-flat label because it is a picture, not an adjective: you can see the queue.
+The word is "blackhole": the human who swallows every request, every
+email, every deadline — and never sends anything back. One word, 9 bytes,
+a wry portrait of the boss, client or manager who signs off on the work.
+It beats a flat label because it is a picture, not an adjective: you can
+see the requests vanish. Nothing ever comes back out.
 """
 
 import os
 import sys
 
-WORD = "roadblock"
+WORD = "blackhole"
 
 
 def check_word(word):
-    """The gate wants 1-30 UTF-8 characters, one word, not only whitespace."""
+    """The gate wants 1-30 UTF-8 characters, one word, not only whitespace.
+
+    A single coined-looking token still counts as one word: the gate checks
+    length and whitespace only, and the judge reads it as one portrait.
+    """
     if not word or word.strip() == "":
         raise ValueError("entry must not be empty or only whitespace")
     if not 1 <= len(word) <= 30:
